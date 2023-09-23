@@ -5,11 +5,14 @@ description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 38 # latest is also supported if you want new updates ASAP
+image-version: latest # 38 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - type: script
+    scripts:
+      - repos.sh
   - type: files
     files:
       - usr: /usr
@@ -26,9 +29,49 @@ modules:
     install:
       # - micro
       # - starship
+      - bash-color-prompt
+      - gnome-shell-extension-appindicator
+      - gnome-shell-extension-blur-my-shell
+      - gnome-shell-extension-dash-to-dock
+      - gnome-shell-extension-gsconnect
+      - input-remapper
+      - libratbag-ratbagd
+      - nautilus-gsconnect
+      - pulseaudio-utils
+      - python3-pip
+      - samba-dcerpc
+      - samba-ldb-ldap-modules
+      - samba-winbind-clients
+      - samba-winbind-modules
+      - samba
+      - stress-ng
+      - tmux
+      - xprop
+      - zsh
+      - adobe-source-code-pro-fonts
+      - cascadiacode-nerd-fonts
+      - google-droid-sans-mono-fonts
+      - google-go-mono-fonts
+      - ibm-plex-mono-fonts
+      - jetbrains-mono-fonts-all
+      - mozilla-fira-mono-fonts
+      - powerline-fonts
+      - ubuntu-nerd-fonts
+      - ubuntumono-nerd-fonts
+      - distrobox
+      - libvirt
+      - podman-plugins
+      - podman-tui
+      - podmansh
+      - powertop
+      - virt-manager
+      - code
+
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      - gnome-software-rpm-ostree
+      - gnome-tour
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
@@ -38,10 +81,9 @@ modules:
         # in your custom.just (added by default) or local justfile
       - nix-installer # shell shortcuts for determinate system's nix installers
       - ublue-os-wallpapers
-      # - ublue-update # https://github.com/ublue-os/ublue-update
-      # - dconf-update-service # a service unit that updates the dconf db on boot
-      # - devpod # https://devpod.sh/ as an rpm
-
+      - ublue-update # https://github.com/ublue-os/ublue-update
+      - dconf-update-service # a service unit that updates the dconf db on boot
+      - gnome-vrr
 
   - type: yafti
       # if included, yafti and it's dependencies (pip & libadwaita)
@@ -53,5 +95,6 @@ modules:
 
   - type: script
     scripts:
+      - bluefin.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
