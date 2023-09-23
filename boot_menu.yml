@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: ublue-os/startingpoint
+  - label: ublue-os/ublue-kfm
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: startingpoint
+      - label: ublue-kfm
