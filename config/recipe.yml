@@ -60,9 +60,11 @@ modules:
       - ubuntumono-nerd-fonts
       - distrobox
       - libvirt
-      - podman-plugins
-      - podman-tui
-      - podmansh
+      - docker-ce 
+      - docker-ce-cli 
+      - containerd.io 
+      - docker-buildx-plugin 
+      - docker-compose-plugin
       - powertop
       - virt-manager
       - code

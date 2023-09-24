@@ -7,3 +7,4 @@ set -oue pipefail
 
 wget https://copr.fedorainfracloud.org/coprs/bobslept/nerd-fonts/repo/fedora-"${OS_VERSION}"/bobslept-nerd-fonts-fedora-"${OS_VERSION}".repo -O /etc/yum.repos.d/bobslept-nerd-fonts-fedora-"${OS_VERSION}".repo
 wget https://packages.microsoft.com/yumrepos/vscode/config.repo -O /etc/yum.repos.d/vscode.repo
+wget https://download.docker.com/linux/fedora/docker-ce.repo -O /etc/yum.repos.d/docker.repo

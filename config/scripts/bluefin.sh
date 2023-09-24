@@ -11,4 +11,3 @@ sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/user
 sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf
 sed -i '/^PRETTY_NAME/s/Silverblue/uBlue-KFM/' /usr/lib/os-release
 systemctl enable rpm-ostree-countme.service
-systemctl enable podman.socket
