@@ -1,2 +1,6 @@
 [org/gnome/desktop/background]
-picture-uri='file:///home/daryl/System/login-background.png'
+picture-uri='file:///usr/share/backgrounds/login.jpg'
+picture-uri-dark='file:///usr/share/backgrounds/login.jpg'
+picture-options='stretched'
+primary-color='000000'
+secondary-color='FFFFFF'
