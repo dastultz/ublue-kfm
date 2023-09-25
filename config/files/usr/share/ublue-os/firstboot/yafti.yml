@@ -57,6 +57,7 @@ screens:
           description: Core system applications for the GNOME desktop environment.
           default: true
           packages:
+            - Blackbox Terminal: com.raggesilver.BlackBox
             - Calculator: org.gnome.Calculator
             - Calendar: org.gnome.Calendar
             - Characters: org.gnome.Characters
