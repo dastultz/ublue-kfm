@@ -27,8 +27,6 @@ modules:
       - https://packages.microsoft.com/yumrepos/vscode/config.repo
       - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
-      # - micro
-      # - starship
       - bash-color-prompt
       - gnome-shell-extension-appindicator
       - gnome-shell-extension-blur-my-shell
@@ -68,6 +66,7 @@ modules:
       - powertop
       - virt-manager
       - code
+      - rsnapshot
 
     remove:
       - firefox # default firefox removed in favor of flatpak
@@ -98,6 +97,7 @@ modules:
     system:
       enabled:
         - rpm-ostree-countme.service
+        - dconf-update.service
         
   - type: script
     scripts:
