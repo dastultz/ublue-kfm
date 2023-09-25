@@ -4,3 +4,13 @@ picture-uri-dark='file:///usr/share/backgrounds/login.jpg'
 picture-options='stretched'
 primary-color='000000'
 secondary-color='FFFFFF'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Control><Alt><Shift>t'
+command='flatpak run com.raggesilver.BlackBox'
+name='blackbox local'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Control><Alt>t'
+command='flatpak run com.raggesilver.BlackBox --command "distrobox enter fedora"'
+name='blackbox distrobox fedora'
