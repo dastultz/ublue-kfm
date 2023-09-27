@@ -63,7 +63,6 @@ modules:
       - podmansh
       - powertop
       - virt-manager
-      - code
       - rsnapshot
 
     remove:
