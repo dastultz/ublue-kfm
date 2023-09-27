@@ -58,11 +58,9 @@ modules:
       - ubuntumono-nerd-fonts
       - distrobox
       - libvirt
-      - docker-ce 
-      - docker-ce-cli 
-      - containerd.io 
-      - docker-buildx-plugin 
-      - docker-compose-plugin
+      - podman-plugins
+      - podman-tui
+      - podmansh
       - powertop
       - virt-manager
       - code
@@ -98,6 +96,7 @@ modules:
       enabled:
         - rpm-ostree-countme.service
         - dconf-update.service
+        - podman.socket
         
   - type: script
     scripts:
