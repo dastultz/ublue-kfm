@@ -64,6 +64,7 @@ modules:
       - powertop
       - virt-manager
       - rsnapshot
+      - glib2
 
     remove:
       - firefox # default firefox removed in favor of flatpak
@@ -100,5 +101,6 @@ modules:
   - type: script
     scripts:
       - bluefin.sh
+      - set-gdm-wallpaper.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
