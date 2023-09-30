@@ -10,6 +10,4 @@ cd WhiteSur-gtk-theme
 sed -i 's|-w "/root"|true|g' shell/lib-flatpak.sh
 sed -i 's|-w "/root"|true|g' shell/lib-core.sh
 
-mkdir -p /usr/share/themes
-sudo ./install.sh -d /usr/share/themes -c Dark -t default -t orange -t grey -t blue -i fedora --silent-mode
-sudo ./tweaks.sh --gdm --silent-mode
+sudo ./tweaks.sh --gdm -c Dark -N -n -b /usr/share/backgrounds/login.jpg --silent-mode
