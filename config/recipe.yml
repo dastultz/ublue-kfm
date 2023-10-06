@@ -25,13 +25,16 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/bobslept/nerd-fonts/repo/fedora-%OS_VERSION%/bobslept-nerd-fonts-fedora-%OS_VERSION%.repo
       - https://packages.microsoft.com/yumrepos/vscode/config.repo
-      - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
       - bash-color-prompt
       - gnome-shell-extension-appindicator
       - gnome-shell-extension-blur-my-shell
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
+      - gnome-shell-extension-drive-menu
+      - gnome-shell-extension-places-menu
+      - gnome-shell-extension-native-window-placement
+      - gnome-shell-extension-user-theme
       - input-remapper
       - libratbag-ratbagd
       - nautilus-gsconnect
@@ -79,8 +82,6 @@ modules:
     install:
       - fonts # selection of common good free fonts
       - justfiles
-        # add "!include /usr/share/ublue-os/just/bling.just"
-        # in your custom.just (added by default) or local justfile
       - nix-installer # shell shortcuts for determinate system's nix installers
       - ublue-os-wallpapers
       - ublue-update # https://github.com/ublue-os/ublue-update

@@ -93,8 +93,6 @@ screens:
           packages:
             - Brave: com.brave.Browser
             - Google Chrome: com.google.Chrome
-            - Microsoft Edge: com.microsoft.Edge
-            - Opera: com.opera.Opera
         Development:
           description: Development tools.
           default: true
