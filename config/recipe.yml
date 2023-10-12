@@ -49,6 +49,8 @@ modules:
       - tmux
       - xprop
       - zsh
+      - rsnapshot
+      # fonts
       - adobe-source-code-pro-fonts
       - cascadiacode-nerd-fonts
       - google-droid-sans-mono-fonts
@@ -59,6 +61,8 @@ modules:
       - powerline-fonts
       - ubuntu-nerd-fonts
       - ubuntumono-nerd-fonts
+      - rsms-inter-fonts
+      # virtualization
       - distrobox
       - libvirt
       - podman-plugins
@@ -66,8 +70,7 @@ modules:
       - podmansh
       - powertop
       - virt-manager
-      - rsnapshot
-      # theming
+      # theming support
       - glib2-devel
       - sassc
       - ImageMagick

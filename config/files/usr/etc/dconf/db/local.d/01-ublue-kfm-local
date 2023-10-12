@@ -13,15 +13,25 @@ favorite-apps = ['firefox.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop'
 enabled-extensions = ['drive-menu@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'arcmenu@arcmenu.com', 'blur-my-shell@aunetx', 'rounded-window-corners@yilozt', 'panel-corners@aunetx', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'Sur_Clock@medaip90.com', 'gsconnect@andyholmes.github.io']
 
 [org/gnome/desktop/background]
-picture-uri='file:///usr/share/backgrounds/login.jpg'
-picture-uri-dark='file:///usr/share/backgrounds/login.jpg'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/fedora-workstation/futurecity_light.webp'
+picture-uri-dark='file:///usr/share/backgrounds/fedora-workstation/futurecity_dark.webp'
+primary-color='#000000000000'
+secondary-color='#000000000000'
 
 [org/gnome/desktop/interface]
-font-name="Inter 11"
-document-font-name="Inter 11"
+clock-show-weekday=true
+color-scheme='prefer-dark'
+document-font-name='Droid Sans 11'
+font-antialiasing='grayscale'
+font-hinting='slight'
+font-name='Droid Sans 11'
+gtk-theme='adw-gtk3-dark'
+monospace-font-name='Monospace 10'
 
 [org/gnome/desktop/wm/preferences]
-titlebar-font="Inter 11"
+button-layout='close,maximize:appmenu'
+titlebar-font='Droid Sans Bold 11'
 
 [org/gnome/desktop/peripherals/touchpad]
 tap-to-click=true
