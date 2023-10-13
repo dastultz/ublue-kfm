@@ -5,7 +5,7 @@ set -oue pipefail
 
 IMAGE="/usr/share/backgrounds/fedora-workstation/futurecity_light.webp"
 
-WORKDIR=~/tmp/gdm-login-background
+WORKDIR=/tmp/gdm-login-background
 GST=/usr/share/gnome-shell/gnome-shell-theme.gresource
 GSTRES=$(basename $GST)
 
@@ -40,9 +40,3 @@ glib-compile-resources "${GSTRES}.xml"
 
 sudo mv "/usr/share/gnome-shell/$GSTRES" "/usr/share/gnome-shell/${GSTRES}.backup"
 sudo mv "$GSTRES" /usr/share/gnome-shell/
-
-rm -r $WORKDIR
-
-if [ "$CREATED_TMP" = "1" ]; then
-  rm -r ~/tmp
-fi
