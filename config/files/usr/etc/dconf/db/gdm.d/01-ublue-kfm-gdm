@@ -58,10 +58,3 @@ banner-message-enable=false
 banner-message-text='Welcome!'
 disable-restart-buttons=false
 disable-user-list=false
-
-[org/gnome/desktop/background]
-picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/fedora-workstation/futurecity_light.webp'
-picture-uri-dark='file:///usr/share/backgrounds/fedora-workstation/futurecity_dark.webp'
-primary-color='#000000000000'
-secondary-color='#000000000000'
