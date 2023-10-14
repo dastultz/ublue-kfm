@@ -10,4 +10,4 @@ cd WhiteSur-gtk-theme
 sed -i 's|-w "/root"|true|g' shell/lib-flatpak.sh
 sed -i 's|-w "/root"|true|g' shell/lib-core.sh
 
-sudo ./tweaks.sh --gdm -c Dark -N -n -b /usr/share/backgrounds/fedora-workstation/futurecity_dark.webp --silent-mode -i fedora
+sudo ./tweaks.sh --gdm -c Dark -n --silent-mode -i fedora
