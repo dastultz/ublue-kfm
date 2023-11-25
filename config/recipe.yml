@@ -4,8 +4,8 @@ name: ublue-kfm
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: latest # 38 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/kinoite-main
+image-version: latest
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -27,17 +27,8 @@ modules:
       - https://packages.microsoft.com/yumrepos/vscode/config.repo
     install:
       - bash-color-prompt
-      - gnome-shell-extension-appindicator
-      - gnome-shell-extension-blur-my-shell
-      - gnome-shell-extension-dash-to-dock
-      - gnome-shell-extension-gsconnect
-      - gnome-shell-extension-drive-menu
-      - gnome-shell-extension-places-menu
-      - gnome-shell-extension-native-window-placement
-      - gnome-shell-extension-user-theme
       - input-remapper
       - libratbag-ratbagd
-      - nautilus-gsconnect
       - pulseaudio-utils
       - python3-pip
       - samba-dcerpc
@@ -70,16 +61,10 @@ modules:
       - podmansh
       - powertop
       - virt-manager
-      # theming support
-      - glib2-devel
-      - sassc
-      - ImageMagick
 
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-      - gnome-software-rpm-ostree
-      - gnome-tour
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
@@ -108,6 +93,5 @@ modules:
   - type: script
     scripts:
       - bluefin.sh
-      - install-whitesur-theme.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
