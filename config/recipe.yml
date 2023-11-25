@@ -41,6 +41,7 @@ modules:
       - xprop
       - zsh
       - rsnapshot
+      - adwaita-qt5
       # fonts
       - adobe-source-code-pro-fonts
       - cascadiacode-nerd-fonts
