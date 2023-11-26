@@ -25,6 +25,8 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/bobslept/nerd-fonts/repo/fedora-%OS_VERSION%/bobslept-nerd-fonts-fedora-%OS_VERSION%.repo
       - https://packages.microsoft.com/yumrepos/vscode/config.repo
+      # next is for opentabletdriver
+      - https://copr.fedorainfracloud.org/coprs/gloriouseggroll/nobara/repo/fedora-38/gloriouseggroll-nobara-fedora-38.repo
     install:
       - bash-color-prompt
       - input-remapper
@@ -42,6 +44,7 @@ modules:
       - zsh
       - rsnapshot
       - adwaita-qt5
+      - opentabletdriver
       # fonts
       - adobe-source-code-pro-fonts
       - cascadiacode-nerd-fonts
