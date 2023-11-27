@@ -43,6 +43,16 @@ screens:
         We have detected that you don't have Flathub's repository on your current user account. We will now add that repository to your account.
       actions:
         - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
+  enable-opentabletdriver:
+    source: yafti.screen.consent
+    values:
+      title: Enable Open Tablet Driver Service
+      condition:
+        run: systemctl --user list-units | grep opentabletdriver.service | wc -l | grep '^0$'
+      description: |
+        The Open Tablet Driver Service will be enabled
+      actions:
+        - run: systemctl --user enable opentabletdriver --now
   applications:
     source: yafti.screen.package
     values:
