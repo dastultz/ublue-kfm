@@ -9,8 +9,9 @@
 # does nothing if the image is built in the cloud.
 
 # !! Warning: changing these might not do anything for you. Read comment above.
-ARG IMAGE_MAJOR_VERSION=38
-ARG BASE_IMAGE_URL=ghcr.io/ublue-os/kinoite-main
+ARG IMAGE_MAJOR_VERSION=40
+ARG BASE_IMAGE_URL=ghcr.io/ublue-os/silverblue-main
+
 
 FROM ${BASE_IMAGE_URL}:${IMAGE_MAJOR_VERSION}
 

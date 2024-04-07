@@ -4,8 +4,8 @@ name: ublue-kfm
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/kinoite-main
-image-version: latest
+base-image: ghcr.io/ublue-os/silverblue-main
+image-version: 40
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -28,8 +28,17 @@ modules:
     install:
       - cronie
       - bash-color-prompt
+      - gnome-shell-extension-appindicator
+      - gnome-shell-extension-blur-my-shell
+      - gnome-shell-extension-dash-to-dock
+      - gnome-shell-extension-gsconnect
+      - gnome-shell-extension-drive-menu
+      - gnome-shell-extension-places-menu
+      - gnome-shell-extension-native-window-placement
+      - gnome-shell-extension-user-theme
       - input-remapper
       - libratbag-ratbagd
+      - nautilus-gsconnect
       - pulseaudio-utils
       - python3-pip
       - samba-dcerpc
@@ -63,10 +72,16 @@ modules:
       - podmansh
       - powertop
       - virt-manager
+      # theming support
+      - glib2-devel
+      - sassc
+      - ImageMagick
 
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      - gnome-software-rpm-ostree
+      - gnome-tour
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
@@ -75,6 +90,7 @@ modules:
       - nix-installer # shell shortcuts for determinate system's nix installers
       - ublue-os-wallpapers
       - ublue-update # https://github.com/ublue-os/ublue-update
+      - dconf-update-service # a service unit that updates the dconf db on boot
 
   - type: yafti
       # if included, yafti and it's dependencies (pip & libadwaita)
@@ -88,6 +104,7 @@ modules:
     system:
       enabled:
         - rpm-ostree-countme.service
+        - dconf-update.service
         - podman.socket
         
   - type: script
