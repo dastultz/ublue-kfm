@@ -83,14 +83,24 @@ modules:
       - gnome-software-rpm-ostree
       - gnome-tour
 
+  type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode # don't add spaces or "Nerd Font" suffix.
+        - Hack
+        - SourceCodePro
+        - Terminus
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
+      google-fonts:
+        - Roboto
+        - Open Sans
   - type: bling # configure what to pull in from ublue-os/bling
     install:
-      - fonts # selection of common good free fonts
       - justfiles
-      - nix-installer # shell shortcuts for determinate system's nix installers
-      - ublue-os-wallpapers
       - ublue-update # https://github.com/ublue-os/ublue-update
       - dconf-update-service # a service unit that updates the dconf db on boot
+      - 1password # install 1Password (stable) and `op` CLI tool
 
   - type: yafti
       # if included, yafti and it's dependencies (pip & libadwaita)
